@@ -18,6 +18,8 @@
 		D0836ACF187727E300702234 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0836AAE187727E300702234 /* Cocoa.framework */; };
 		D0836AD7187727E300702234 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0836AD5187727E300702234 /* InfoPlist.strings */; };
 		D0836AD9187727E300702234 /* mypgTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0836AD8187727E300702234 /* mypgTests.m */; };
+		D0836AFC1877297A00702234 /* PGVIController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0836AFB1877297A00702234 /* PGVIController.m */; };
+		D0836B001877486E00702234 /* PGSQLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0836AFF1877486E00702234 /* PGSQLKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,9 @@
 		D0836AD4187727E300702234 /* mypgTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "mypgTests-Info.plist"; sourceTree = "<group>"; };
 		D0836AD6187727E300702234 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D0836AD8187727E300702234 /* mypgTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mypgTests.m; sourceTree = "<group>"; };
+		D0836AFA1877297A00702234 /* PGVIController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGVIController.h; sourceTree = "<group>"; };
+		D0836AFB1877297A00702234 /* PGVIController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGVIController.m; sourceTree = "<group>"; };
+		D0836AFF1877486E00702234 /* PGSQLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PGSQLKit.framework; path = ../../../../Library/Frameworks/PGSQLKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0836B001877486E00702234 /* PGSQLKit.framework in Frameworks */,
 				D0836AAF187727E300702234 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,6 +101,7 @@
 		D0836AAD187727E300702234 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D0836AFF1877486E00702234 /* PGSQLKit.framework */,
 				D0836AAE187727E300702234 /* Cocoa.framework */,
 				D0836ACD187727E300702234 /* XCTest.framework */,
 				D0836AB0187727E300702234 /* Other Frameworks */,
@@ -115,6 +122,8 @@
 		D0836AB4187727E300702234 /* mypg */ = {
 			isa = PBXGroup;
 			children = (
+				D0836AFA1877297A00702234 /* PGVIController.h */,
+				D0836AFB1877297A00702234 /* PGVIController.m */,
 				D0836AC0187727E300702234 /* AppDelegate.h */,
 				D0836AC1187727E300702234 /* AppDelegate.m */,
 				D0836AC3187727E300702234 /* MainMenu.xib */,
@@ -252,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0836AFC1877297A00702234 /* PGVIController.m in Sources */,
 				D0836AC2187727E300702234 /* AppDelegate.m in Sources */,
 				D0836ABB187727E300702234 /* main.m in Sources */,
 			);
@@ -384,6 +394,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Volumes/Mac\\ Archive/Develop/SW/DB/Postgres/release-postgresql-kit-alpha005",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "mypg/mypg-Prefix.pch";
 				INFOPLIST_FILE = "mypg/mypg-Info.plist";
@@ -397,6 +412,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Volumes/Mac\\ Archive/Develop/SW/DB/Postgres/release-postgresql-kit-alpha005",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "mypg/mypg-Prefix.pch";
 				INFOPLIST_FILE = "mypg/mypg-Info.plist";

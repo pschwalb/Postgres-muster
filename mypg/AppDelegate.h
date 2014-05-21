@@ -7,9 +7,14 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "PGVIController.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate>{
+    __weak NSTextField *ego;
+       
+}
 
 @property (assign) IBOutlet NSWindow *window;
 
+@property (weak) IBOutlet NSTextField *_ego;
 @end
